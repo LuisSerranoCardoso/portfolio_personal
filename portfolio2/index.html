@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Luis Serrano | Backend & Tooling</title>
+  <meta name="description" content="Portfolio de desarrollador backend y creador de herramientas." />
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Iconos: Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SlK6l8h9+F+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Librerías -->
+  <script defer src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a class="brand" href="#">
+        <img src="img/logo.png" alt="Logo Luis Serrano" class="logo" />
+        <span>Luis Serrano</span>
+      </a>
+      <nav class="nav" role="navigation">
+        <a class="nav-link" href="#projects" data-i18n="nav.projects">Proyectos</a>
+        <a class="nav-link" href="#toolbox" data-i18n="nav.toolbox">Toolbox</a>
+        <a class="nav-link" href="#playground" data-i18n="nav.playground">Playground</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="actions">
+        <button id="lang-toggle" class="chip" aria-label="Language toggle">ES</button>
+        <button id="theme-toggle" class="chip" aria-label="Theme toggle" title="Toggle theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <!-- Selector de acento -->
+        <div class="theme-accent">
+          <button id="accent-toggle" class="chip" aria-haspopup="true" aria-expanded="false" aria-controls="accent-panel" title="Accent color">
+            <i class="fa-solid fa-palette" aria-hidden="true"></i>
+          </button>
+          <div id="accent-panel" class="accent-panel" hidden>
+            <button class="swatch" data-brand="#d4af6a" data-brand2="#b89457" data-accent="#4a90e2" style="--sw:#d4af6a" aria-label="Gold"></button>
+            <button class="swatch" data-brand="#00d4ff" data-brand2="#00a3c4" data-accent="#7c3aed" style="--sw:#00d4ff" aria-label="Cyan"></button>
+            <button class="swatch" data-brand="#22c55e" data-brand2="#16a34a" data-accent="#0ea5e9" style="--sw:#22c55e" aria-label="Green"></button>
+            <button class="swatch" data-brand="#f97316" data-brand2="#ea580c" data-accent="#3b82f6" style="--sw:#f97316" aria-label="Orange"></button>
+            <button class="swatch" data-brand="#ef4444" data-brand2="#dc2626" data-accent="#a855f7" style="--sw:#ef4444" aria-label="Red"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main role="main">
+    <section class="hero" id="hero">
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="terminal tilt">
+            <div class="term-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="term-title" data-i18n="hero.terminalTitle">dev@luis: ~</span>
+            </div>
+            <div class="term-body">
+              <pre class="typed-block"><span id="typed"></span><span class="cursor">█</span></pre>
+            </div>
+          </div>
+          <div class="hero-text">
+            <h1 class="reveal-up" data-i18n="hero.h1">Desarrollador Backend & Creador de Herramientas</h1>
+            <p class="reveal-up" data-i18n="hero.sub">
+              APIs robustas, CLIs eficientes y plataformas internas con foco en rendimiento y DX.
+            </p>
+            <div class="hero-cta reveal-up">
+              <a href="#projects" class="btn btn-primary" data-i18n="cta.viewProjects">Ver proyectos</a>
+              <a href="#contact" class="btn btn-secondary" data-i18n="cta.hireMe">Contactar</a>
+            </div>
+            <div class="stats reveal-up">
+              <div class="stat"><span id="stat-repos">--</span><label data-i18n="stats.repos">Repos</label></div>
+              <div class="stat"><span id="stat-stars">--</span><label>⭐ Stars</label></div>
+              <div class="stat"><span id="stat-followers">--</span><label data-i18n="stats.followers">Seguidores</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-i18n="sections.projects">Proyectos destacados</h2>
+        <div class="filter-buttons reveal-up">
+          <button class="filter-btn active" data-filter="all" data-i18n="filters.all">Todos</button>
+          <button class="filter-btn" data-filter="api">API</button>
+          <button class="filter-btn" data-filter="cli">CLI</button>
+          <button class="filter-btn" data-filter="infra" data-i18n="filters.infra">Infra</button>
+        </div>
+
+        <div class="cards">
+          <article class="card project tilt fade-in" data-category="api">
+            <div class="card-media reveal-img">
+              <img src="img/projects/api-gateway.jpg" alt="API Gateway" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="tags"><span class="tag">Go</span><span class="tag">gRPC</span><span class="tag">K8s</span></div>
+              <h3>API Gateway</h3>
+              <p data-i18n="projects.apiGateway">Gateway de alto rendimiento con gRPC y rate limiting distribuido.</p>
+              <div class="card-actions">
+                <a href="#" class="btn-icon project-link" title="Details" aria-label="Ver detalles"><i class="fa-regular fa-eye" aria-hidden="true"></i></a>
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project tilt fade-in" data-category="cli">
+            <div class="card-media reveal-img">
+              <img src="img/projects/dev-cli.jpg" alt="Dev CLI" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="tags"><span class="tag">Node</span><span class="tag">TS</span></div>
+              <h3>Dev CLI</h3>
+              <p data-i18n="projects.devCli">CLI para scaffolding y pipelines locales con plugins.</p>
+              <div class="card-actions">
+                <a href="#" class="btn-icon project-link" aria-label="Ver detalles"><i class="fa-regular fa-eye" aria-hidden="true"></i></a>
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project tilt fade-in" data-category="infra">
+            <div class="card-media reveal-img">
+              <img src="img/projects/observability.jpg" alt="Observability" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="tags"><span class="tag">Python</span><span class="tag">OpenTelemetry</span></div>
+              <h3>Observability Kit</h3>
+              <p data-i18n="projects.obsKit">Paquete para trazas/metrics/logs con exporters listos.</p>
+              <div class="card-actions">
+                <a href="#" class="btn-icon project-link" aria-label="Ver detalles"><i class="fa-regular fa-eye" aria-hidden="true"></i></a>
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Toggle para el efecto de code rain -->
+      <div class="actions">
+        <button id="code-rain-toggle" class="chip" aria-label="Toggle code rain">🌧️</button>
+      </div>
+
+      <!-- Modales de proyectos -->
+      <div id="project-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <span class="close" aria-label="Close modal">&times;</span>
+          <h2 class="modal-title">Project Title</h2>
+          <div class="modal-tabs">
+            <button class="tab" data-tab="summary">Resumen</button>
+            <button class="tab" data-tab="code">Código</button>
+            <button class="tab" data-tab="tech">Tech</button>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content" id="summary">Contenido del resumen...</div>
+            <div class="tab-content" id="code" hidden>Código del proyecto...</div>
+            <div class="tab-content" id="tech" hidden>Tecnologías utilizadas...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="toolbox">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-i18n="sections.toolbox">Toolbox</h2>
+        <div class="tool-grid">
+          <div class="tool-card tilt">
+            <h3>dx-scripts</h3>
+            <p data-i18n="toolbox.dx">Colección de scripts para dev experience.</p>
+            <code>npm i -g dx-scripts</code>
+            <button class="btn-copy" data-copy="npm i -g dx-scripts" data-i18n="buttons.copy">Copiar</button>
+          </div>
+          <div class="tool-card tilt">
+            <h3>fast-mock</h3>
+            <p data-i18n="toolbox.mock">Servidor mock ultrarrápido para tests.</p>
+            <code>pip install fast-mock</code>
+            <button class="btn-copy" data-copy="pip install fast-mock" data-i18n="buttons.copy">Copiar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="playground">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-i18n="sections.playground">Playground</h2>
+        <div class="playground-grid">
+          <!-- Controles de latencia y error -->
+          <div class="play-controls">
+            <label>Latency
+              <input type="range" id="latency" min="0" max="2000" step="50" value="400">
+              <span id="latency-val">400ms</span>
+            </label>
+            <label>Error %
+              <input type="range" id="errorp" min="0" max="50" step="1" value="0">
+              <span id="errorp-val">0%</span>
+            </label>
+          </div>
+          <div class="play-actions">
+            <button class="btn btn-primary" id="btn-ping">GET /api/ping</button>
+            <button class="btn btn-secondary" id="btn-users">GET /api/users</button>
+            <button class="btn" id="btn-error">GET /api/error</button>
+          </div>
+          <pre class="console" id="console"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-i18n="sections.contact">Contacto</h2>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+          <div class="grid">
+            <div class="form-group">
+              <label data-i18n="form.name">Nombre</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form.subject">Asunto</label>
+            <input type="text" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form.message">Mensaje</label>
+            <textarea rows="6" name="message" required></textarea>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" name="privacy" required>
+            <span data-i18n="form.privacy">Acepto la política de privacidad</span>
+          </label>
+          <button type="submit" class="btn btn-primary" data-i18n="buttons.send">Enviar</button>
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div>© <span id="year"></span> Luis Serrano</div>
+      <div class="socials">
+        <a href="https://github.com/LuisSerranoCardoso" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="mailto:luis.serrano@edu.uah.es" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cursor"></div>
+</body>
+</html>
