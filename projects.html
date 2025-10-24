@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Luis Serrano</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">Luis Serrano</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="about.html" class="nav-link">Sobre mí</a>
+        <a href="projects.html" class="nav-link active">Proyectos</a>
+        <a href="contact.html" class="nav-link">Contacto</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="projects-page">
+    <section class="projects-hero">
+      <div class="container">
+        <h1 class="page-title">Mis Proyectos</h1>
+        <p class="page-subtitle">Explora mi trabajo en Ciberseguridad, IA y Sistemas Electrónicos</p>
+      </div>
+    </section>
+
+    <section class="projects-filters">
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i> Todos
+          </button>
+          <button class="filter-btn" data-filter="ciberseguridad">
+            <i class="fas fa-shield-alt"></i> Ciberseguridad
+          </button>
+          <button class="filter-btn" data-filter="ia">
+            <i class="fas fa-brain"></i> Inteligencia Artificial
+          </button>
+          <button class="filter-btn" data-filter="hardware">
+            <i class="fas fa-microchip"></i> Hardware
+          </button>
+          <button class="filter-btn" data-filter="redes">
+            <i class="fas fa-network-wired"></i> Redes
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-grid-section">
+      <div class="container">
+        <div class="projects-grid">
+          
+          <!-- Proyecto 1: Ciberseguridad -->
+          <article class="project-card" data-category="ciberseguridad">
+            <div class="project-image">
+              <img src="img/projects/cybersecurity.jpg" alt="Sistema de Detección de Intrusiones">
+              <div class="project-overlay">
+                <a href="#" class="project-link">
+                  <i class="fas fa-eye"></i> Ver Detalles
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Ciberseguridad</span>
+                <span class="tag">Python</span>
+              </div>
+              <h3>Sistema de Detección de Intrusiones</h3>
+              <p>IDS basado en machine learning para detección de amenazas en tiempo real en redes militares.</p>
+              <div class="project-tech">
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fas fa-network-wired"></i> Scapy</span>
+                <span><i class="fas fa-brain"></i> TensorFlow</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" title="Ver código">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="btn-icon" title="Demo en vivo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: IA -->
+          <article class="project-card" data-category="ia">
+            <div class="project-image">
+              <img src="img/projects/ai-detection.jpg" alt="IA para Análisis de Amenazas">
+              <div class="project-overlay">
+                <a href="#" class="project-link">
+                  <i class="fas fa-eye"></i> Ver Detalles
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">IA</span>
+                <span class="tag">Deep Learning</span>
+              </div>
+              <h3>IA para Análisis de Amenazas</h3>
+              <p>Modelo de deep learning para clasificación y análisis predictivo de ciberamenazas avanzadas.</p>
+              <div class="project-tech">
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fas fa-brain"></i> PyTorch</span>
+                <span><i class="fas fa-chart-line"></i> NumPy</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" title="Ver código">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="btn-icon" title="Documentación">
+                  <i class="fas fa-file-alt"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Hardware -->
+          <article class="project-card" data-category="hardware">
+            <div class="project-image">
+              <img src="img/projects/iot-security.jpg" alt="Sistema IoT Seguro">
+              <div class="project-overlay">
+                <a href="#" class="project-link">
+                  <i class="fas fa-eye"></i> Ver Detalles
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Hardware</span>
+                <span class="tag">IoT</span>
+              </div>
+              <h3>Sistema IoT Seguro con Encriptación</h3>
+              <p>Red de sensores IoT con comunicación encriptada end-to-end usando Raspberry Pi y Arduino.</p>
+              <div class="project-tech">
+                <span><i class="fab fa-raspberry-pi"></i> Raspberry Pi</span>
+                <span><i class="fas fa-microchip"></i> Arduino</span>
+                <span><i class="fab fa-python"></i> C++</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" title="Ver código">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="btn-icon" title="Esquemático">
+                  <i class="fas fa-project-diagram"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: Redes -->
+          <article class="project-card" data-category="redes">
+            <div class="project-image">
+              <img src="img/projects/network-monitor.jpg" alt="Monitor de Red">
+              <div class="project-overlay">
+                <a href="#" class="project-link">
+                  <i class="fas fa-eye"></i> Ver Detalles
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Redes</span>
+                <span class="tag">Monitorización</span>
+              </div>
+              <h3>Sistema de Monitorización de Red</h3>
+              <p>Herramienta de análisis de tráfico de red con alertas en tiempo real y visualización de datos.</p>
+              <div class="project-tech">
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fas fa-network-wired"></i> Wireshark</span>
+                <span><i class="fas fa-chart-bar"></i> Grafana</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" title="Ver código">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="btn-icon" title="Demo">
+                  <i class="fas fa-play"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 5: Ciberseguridad + IA -->
+          <article class="project-card" data-category="ciberseguridad ia">
+            <div class="project-image">
+              <img src="img/projects/malware-detection.jpg" alt="Detector de Malware">
+              <div class="project-overlay">
+                <a href="#" class="project-link">
+                  <i class="fas fa-eye"></i> Ver Detalles
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Ciberseguridad</span>
+                <span class="tag">IA</span>
+              </div>
+              <h3>Detector de Malware con ML</h3>
+              <p>Clasificador de malware usando algoritmos de machine learning y análisis estático/dinámico.</p>
+              <div class="project-tech">
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fas fa-brain"></i> Scikit-learn</span>
+                <span><i class="fas fa-shield-virus"></i> YARA</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" title="Ver código">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="btn-icon" title="Paper">
+                  <i class="fas fa-file-pdf"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 6: Hardware + IA -->
+          <article class="project-card" data-category="hardware ia">
+            <div class="project-image">
+              <img src="img/projects/fpga-ai.jpg" alt="Aceleración IA en FPGA">
+              <div class="project-overlay">
+                <a href="#" class="project-link">
+                  <i class="fas fa-eye"></i> Ver Detalles
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Hardware</span>
+                <span class="tag">IA</span>
+              </div>
+              <h3>Aceleración de IA en FPGA</h3>
+              <p>Implementación de redes neuronales convolucionales en FPGA para procesamiento en tiempo real.</p>
+              <div class="project-tech">
+                <span><i class="fas fa-microchip"></i> VHDL</span>
+                <span><i class="fas fa-brain"></i> Neural Networks</span>
+                <span><i class="fas fa-tachometer-alt"></i> HLS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn-icon" title="Ver código">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="btn-icon" title="Documentación">
+                  <i class="fas fa-book"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="github-section">
+      <div class="container">
+        <div class="github-cta">
+          <i class="fab fa-github"></i>
+          <h2>¿Quieres ver más?</h2>
+          <p>Visita mi perfil de GitHub para explorar todos mis repositorios y contribuciones</p>
+          <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="btn btn-primary">
+            <i class="fab fa-github"></i> Ver GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Luis Serrano · Universidad de Alcalá</p>
+      <div class="footer-links">
+        <a href="mailto:luis.serrano@edu.uah.es">luis.serrano@edu.uah.es</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Luis Serrano</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">Luis Serrano</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="about.html" class="nav-link">Sobre mí</a>
+        <a href="projects.html" class="nav-link">Proyectos</a>
+        <a href="contact.html" class="nav-link active">Contacto</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div class="container">
+        <h1 class="page-title">Hablemos</h1>
+        <p class="page-subtitle">¿Tienes un proyecto en mente? ¿Buscas colaboración? Contáctame</p>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <div class="contact-info">
+            <h2>Información de Contacto</h2>
+            <p>Estoy disponible para proyectos, colaboraciones y oportunidades profesionales. No dudes en contactarme.</p>
+            
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="method-info">
+                  <h3>Email</h3>
+                  <a href="mailto:luis.serrano@edu.uah.es">luis.serrano@edu.uah.es</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="method-info">
+                  <h3>Ubicación</h3>
+                  <p>Madrid, España<br>Universidad de Alcalá</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="method-info">
+                  <h3>Disponibilidad</h3>
+                  <p>Abierto a proyectos<br>y colaboraciones</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-connect">
+              <h3>Conecta conmigo</h3>
+              <div class="social-buttons">
+                <a href="https://github.com/LuisSerranoCardoso" target="_blank" class="social-btn">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/luis-serrano-cardoso-51809419b/" target="_blank" class="social-btn">
+                  <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/serri.18?igsh=d3RlcTdseWkxNHlw&utm_source=qr" target="_blank" class="social-btn">
+                  <i class="fab fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+              <h2>Envíame un mensaje</h2>
+              
+              <div class="form-group">
+                <label for="name">
+                  <i class="fas fa-user"></i> Nombre completo
+                </label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  placeholder="Tu nombre" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i> Email
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="tu@email.com" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="company">
+                  <i class="fas fa-building"></i> Empresa / Organización (opcional)
+                </label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  placeholder="Nombre de tu empresa"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="subject">
+                  <i class="fas fa-tag"></i> Asunto
+                </label>
+                <select id="subject" name="subject" required>
+                  <option value="">Selecciona un asunto</option>
+                  <option value="colaboracion">Colaboración en proyecto</option>
+                  <option value="empleo">Oportunidad laboral</option>
+                  <option value="consultoria">Consultoría</option>
+                  <option value="informacion">Solicitud de información</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment-dots"></i> Mensaje
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="6" 
+                  placeholder="Cuéntame sobre tu proyecto o consulta..." 
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="privacy" name="privacy" required>
+                  <span>He leído y acepto la política de privacidad</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+              </button>
+
+              <div id="form-message" class="form-message"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h3>¿Estás disponible para proyectos freelance?</h3>
+            </div>
+            <p>Sí, estoy abierto a proyectos freelance relacionados con ciberseguridad, desarrollo de software y sistemas embebidos.</p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h3>¿Qué tipo de proyectos te interesan?</h3>
+            </div>
+            <p>Me interesan especialmente proyectos de ciberseguridad militar, aplicaciones de IA en defensa, y desarrollo de sistemas electrónicos digitales.</p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h3>¿Cuál es tu tiempo de respuesta?</h3>
+            </div>
+            <p>Generalmente respondo en 24-48 horas. Para consultas urgentes, puedes contactarme directamente por email.</p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h3>¿Ofreces consultoría?</h3>
+            </div>
+            <p>Sí, ofrezco consultoría en áreas de ciberseguridad, análisis de vulnerabilidades y arquitectura de sistemas seguros.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Luis Serrano · Universidad de Alcalá</p>
+      <div class="footer-links">
+        <a href="mailto:luis.serrano@edu.uah.es">luis.serrano@edu.uah.es</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
