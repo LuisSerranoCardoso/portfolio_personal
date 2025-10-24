@@ -4,10 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luis Serrano | Ingeniero Telemático</title>
+  <meta name="description" content="Portfolio de Luis Serrano, Ingeniero Telemático especializado en Ciberseguridad Militar, IA y Sistemas Electrónicos.">
+  <meta name="keywords" content="Luis Serrano, Ingeniería Telemática, Ciberseguridad, Inteligencia Artificial, Sistemas Embebidos, Defensa, Universidad de Alcalá">
+  <meta name="author" content="Luis Serrano Cardoso">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta property="og:title" content="Luis Serrano | Ingeniero Telemático">
+  <meta property="og:description" content="Portfolio de Luis Serrano, especializado en Ciberseguridad Militar, IA y Sistemas Electrónicos.">
+  <meta property="og:image" content="img/profile.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudominio.com">
 </head>
 <body>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
   <header class="header">
     <div class="container">
       <div class="logo">
@@ -74,6 +86,8 @@
     </div>
   </section>
 
+  <div id="particles-js"></div>
+
   <section class="skills-preview">
     <div class="container">
       <h2 class="section-title">Áreas de Especialización</h2>
@@ -113,5 +127,11 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script>
+  particlesJS.load('particles-js', 'js/particles.json', function() {
+    console.log('particles.js loaded');
+  });
+  </script>
 </body>
 </html>

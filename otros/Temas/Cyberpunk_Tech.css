@@ -1,0 +1,38 @@
+:root {
+  /* Colores modo claro */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-tertiary: #e8ecf1;
+  --text-primary: #1a1d29;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  
+  /* Colores de acento */
+  --accent-primary: #7c3aed;
+  --accent-secondary: #5b21b6;
+  --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  --accent-glow: rgba(124, 58, 237, 0.3);
+  
+  /* Colores de tarjetas */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: rgba(124, 58, 237, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f0f1e;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #252541;
+  --text-primary: #f0f4f8;
+  --text-secondary: #a0aec0;
+  --text-muted: #718096;
+  
+  --accent-primary: #a78bfa;
+  --accent-secondary: #7c3aed;
+  --accent-gradient: linear-gradient(135deg, #a78bfa 0%, #22d3ee 100%);
+  --accent-glow: rgba(167, 139, 250, 0.4);
+  
+  --card-bg: #1a1a2e;
+  --card-border: #2d2d44;
+  --card-shadow: rgba(124, 58, 237, 0.2);
+}

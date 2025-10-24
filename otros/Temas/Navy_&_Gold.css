@@ -1,0 +1,69 @@
+/* ============================================
+   VARIABLES CSS - MODO CLARO Y OSCURO
+   ============================================ */
+:root {
+  /* MODO CLARO - Navy Blue & Gold */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #1a2332;
+  --text-secondary: #3d4f6b;
+  --text-muted: #6c757d;
+  
+  /* Colores de acento - Dorado y Azul Marino */
+  --accent-primary: #c9a961;
+  --accent-secondary: #b8964f;
+  --accent-navy: #1a2332;
+  --accent-gradient: linear-gradient(135deg, #c9a961 0%, #1a2332 100%);
+  --accent-glow: rgba(201, 169, 97, 0.3);
+  
+  /* Colores de tarjetas */
+  --card-bg: #ffffff;
+  --card-border: #e2e8ed;
+  --card-shadow: rgba(26, 35, 50, 0.1);
+  
+  /* Header */
+  --header-bg: rgba(255, 255, 255, 0.98);
+  --header-shadow: rgba(26, 35, 50, 0.08);
+  
+  /* Efectos */
+  --shadow-sm: 0 2px 4px rgba(26, 35, 50, 0.08);
+  --shadow-md: 0 4px 8px rgba(26, 35, 50, 0.12);
+  --shadow-lg: 0 10px 30px rgba(26, 35, 50, 0.15);
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+[data-theme="dark"] {
+  /* MODO OSCURO - Navy & Gold elegante */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #1a2332;
+  --text-primary: #f0f3f5;
+  --text-secondary: #c9d1d9;
+  --text-muted: #8b949e;
+  
+  /* Colores de acento - Dorado brillante sobre oscuro */
+  --accent-primary: #d4af6a;
+  --accent-secondary: #c9a961;
+  --accent-navy: #4a5f7f;
+  --accent-gradient: linear-gradient(135deg, #d4af6a 0%, #4a5f7f 100%);
+  --accent-glow: rgba(212, 175, 106, 0.4);
+  
+  /* Colores de tarjetas */
+  --card-bg: #161b22;
+  --card-border: #21262d;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  
+  /* Header */
+  --header-bg: rgba(13, 17, 23, 0.95);
+  --header-shadow: rgba(212, 175, 106, 0.15);
+  
+  /* Efectos */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(212, 175, 106, 0.2);
+}
