@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luis Serrano | Ciberseguridad Militar</title>
+  <meta name="description" content="Ciberseguridad militar, threat hunting, hardening, red/blue teaming y tooling ofensivo/defensivo."/>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tudominio.com/" />
+  <meta property="og:title" content="Luis Serrano | Ciberseguridad Militar" />
+  <meta property="og:description" content="Operaciones defensivas y ofensivas, threat hunting y hardening en entornos críticos." />
+  <meta property="og:image" content="https://tudominio.com/img/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tudominio.com/" />
+  <meta property="twitter:title" content="Luis Serrano | Ciberseguridad Militar" />
+  <meta property="twitter:description" content="Operaciones defensivas y ofensivas, threat hunting y hardening en entornos críticos." />
+  <meta property="twitter:image" content="https://tudominio.com/img/og-image.jpg" />
+
+  <link rel="icon" type="image/png" href="img/logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script defer src="js/particles.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+  <header class="header">
+    <div class="container">
+      <a class="brand" href="#">
+        <img src="img/logo.png" alt="Logo Luis Serrano" class="logo"/>
+        <span>LS | Cyber Defense</span>
+      </a>
+      <nav class="nav" role="navigation">
+        <a class="nav-link" href="#projects">Operaciones</a>
+        <a class="nav-link" href="#lab">Laboratorio</a>
+        <a class="nav-link" href="#intel">Intelligence</a>
+        <a class="nav-link" href="#contact">Contacto</a>
+      </nav>
+      <div class="actions">
+        <button id="lang-toggle" class="chip" aria-label="Idioma">ES</button>
+        <button id="theme-toggle" class="chip" aria-label="Theme"><i class="fa-solid fa-sun"></i></button>
+        <div class="theme-accent">
+          <button id="accent-toggle" class="chip" aria-haspopup="true" aria-expanded="false" aria-controls="accent-panel" title="Acento">🎯</button>
+          <div id="accent-panel" class="accent-panel" hidden>
+            <button class="swatch" style="--sw:#22c55e" data-brand="#22c55e" data-brand2="#16a34a" data-accent="#f59e0b" aria-label="Green Tactical"></button>
+            <button class="swatch" style="--sw:#84cc16" data-brand="#84cc16" data-brand2="#65a30d" data-accent="#10b981" aria-label="Olive"></button>
+            <button class="swatch" style="--sw:#f59e0b" data-brand="#f59e0b" data-brand2="#d97706" data-accent="#22c55e" aria-label="Amber"></button>
+            <button class="swatch" style="--sw:#38bdf8" data-brand="#38bdf8" data-brand2="#0ea5e9" data-accent="#22c55e" aria-label="Signal Blue"></button>
+            <button class="swatch" style="--sw:#ef4444" data-brand="#ef4444" data-brand2="#dc2626" data-accent="#22c55e" aria-label="Alert Red"></button>
+          </div>
+        </div>
+        <button id="code-rain-toggle" class="chip" aria-label="Code rain">🌧️</button>
+      </div>
+    </div>
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main role="main" id="main-content">
+    <section class="hero" id="hero">
+      <canvas id="hero-radar" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="terminal tilt">
+            <div class="term-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="term-title">ops@luis:~/defense</span>
+            </div>
+            <div class="term-body">
+              <pre class="typed-block"><span id="typed"></span><span class="cursor">█</span></pre>
+            </div>
+          </div>
+          <div class="hero-text">
+            <h1 class="reveal-up">Ciberseguridad Militar & Operaciones</h1>
+            <p class="reveal-up">Threat hunting, hardening, respuesta a incidentes y tooling para operaciones defensivas y ofensivas.</p>
+            <div class="hero-cta reveal-up">
+              <a href="#projects" class="btn btn-primary">Ver Operaciones</a>
+              <a href="#contact" class="btn btn-secondary">Contactar</a>
+            </div>
+
+            <!-- FOTO DE PERFIL -->
+            <div class="hero-photo tilt">
+              <div class="photo-glow"></div>
+              <img src="img/profile.jpg" alt="Luis Serrano" class="profile-img" loading="eager">
+            </div>
+
+            <div class="stats reveal-up">
+              <div class="stat"><span id="stat-cves">--</span><label>Findings</label></div>
+              <div class="stat"><span id="stat-tools">--</span><label>Herramientas</label></div>
+              <div class="stat"><span id="stat-missions">--</span><label>Misiones</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal-up">Operaciones destacadas</h2>
+        <div class="filter-buttons reveal-up">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="blue">Blue</button>
+          <button class="filter-btn" data-filter="red">Red</button>
+          <button class="filter-btn" data-filter="intel">Intel</button>
+        </div>
+
+        <!-- Grid renderizado por JS -->
+        <div class="cards" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="lab">
+      <div class="container">
+        <h2 class="section-title reveal-up">Laboratorio táctico</h2>
+        <div class="tool-grid">
+          <div class="tool-card tilt">
+            <h3>sig-compiler</h3>
+            <p>Compila reglas Sigma a múltiples backends.</p>
+            <code>pip install sig-compiler</code>
+            <button class="btn-copy" data-copy="pip install sig-compiler">Copiar</button>
+          </div>
+          <div class="tool-card tilt">
+            <h3>rca-trace</h3>
+            <p>CLI para Root Cause Analysis con grafos.</p>
+            <code>npm i -g rca-trace</code>
+            <button class="btn-copy" data-copy="npm i -g rca-trace">Copiar</button>
+          </div>
+        </div>
+
+        <div class="playground-grid">
+          <div class="play-controls">
+            <label>Latencia <input type="range" id="latency" min="50" max="1500" value="420"> <span id="latency-val">420ms</span></label>
+            <label>Error% <input type="range" id="errorp" min="0" max="80" value="12"> <span id="errorp-val">12%</span></label>
+            <div class="play-actions">
+              <button id="btn-ping" class="btn btn-secondary">Ping</button>
+              <button id="btn-threats" class="btn btn-secondary">Threats</button>
+              <button id="btn-error" class="btn btn-secondary">Forzar error</button>
+            </div>
+          </div>
+          <pre class="console" id="console"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="intel">
+      <div class="container">
+        <h2 class="section-title reveal-up">Intelligence</h2>
+        <div class="intel-grid">
+          <div class="intel-card tilt">
+            <h3>MITRE ATT&CK Coverage</h3>
+            <p>Mapa de cobertura TTPs y detecciones.</p>
+          </div>
+          <div class="intel-card tilt">
+            <h3>IOC Tracker</h3>
+            <p>IOC ingest, enriquecimiento y scoring.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal-up">Contacto</h2>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+          <div class="grid">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Asunto</label>
+            <input type="text" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea rows="6" name="message" required></textarea>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" name="privacy" required>
+            <span>Acepto la política de privacidad</span>
+          </label>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div>© <span id="year"></span> Luis Serrano</div>
+      <div class="socials">
+        <a href="https://github.com/LuisSerranoCardoso" target="_blank" aria-label="GitHub" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/luis-serrano-cardoso-51809419b" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:luis.serrano@edu.uah.es" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cursor"></div>
+  <div id="code-rain" class="code-rain" hidden></div>
+  
+  <!-- AÑADIR CONTENEDOR DE PARTÍCULAS -->
+  <div id="particles-js"></div>
+
+  <!-- SCRIPT DE INICIALIZACIÓN -->
+  <script>
+    // Inicializar partículas cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.particlesJS) {
+        particlesJS.load('particles-js', 'js/particles.json', function() {
+          console.log('particles.js loaded - portfolio3');
+        });
+      }
+    });
+  </script>
+
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+    <p>Inicializando sistemas tácticos...</p>
+  </div>
+</body>
+</html>

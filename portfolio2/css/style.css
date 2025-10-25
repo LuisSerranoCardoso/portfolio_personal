@@ -180,6 +180,7 @@ input:focus, textarea:focus { border-color:var(--brand) }
   content: ""; position: absolute; inset: -1px; padding: 1px; border-radius: inherit;
   background: conic-gradient(from var(--ang,0deg), var(--brand), transparent 40%, var(--accent), transparent 70%, var(--brand));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); /* Añadido para compatibilidad */
   -webkit-mask-composite: xor; mask-composite: exclude;
   animation: spin 12s linear infinite; opacity: .6; pointer-events: none;
 }
