@@ -2,14 +2,14 @@
    1. Variables & Theme
    ========================================= */
 :root {
-  /* Colors - Navy Blue & Gold/White Theme */
-  --primary-color: #0f172a; /* Dark Navy */
-  --secondary-color: #334155; /* Slate */
-  --accent-color: #ca8a04; /* Gold/Mustard for highlights */
+  /* Colors - Corporate Blue Theme */
+  --primary-color: #5b9bd5; /* Corporate Blue */
+  --secondary-color: #3a6ea5; /* Darker Blue for contrast */
+  --accent-color: #f59e0b; /* Gold/Amber for highlights */
   --text-color: #1e293b;
   --text-light: #64748b;
   --bg-color: #ffffff;
-  --bg-light: #f8fafc;
+  --bg-light: #f0f9ff; /* Very light blue tint */
   --white: #ffffff;
 
   /* Typography */
@@ -199,13 +199,19 @@ img {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-icon {
