@@ -4,6 +4,34 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
+    /* 0. Loader Removal */
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loader-wrapper');
+        if (loader) {
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 500); // Minimum visibility time
+        }
+    });
+
+    /* 0.8 Cookie Consent */
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+        // Show banner after a short delay
+        setTimeout(() => {
+            cookieBanner.classList.remove('hidden');
+        }, 2000);
+    }
+
+    if (acceptCookiesBtn) {
+        acceptCookiesBtn.addEventListener('click', () => {
+            cookieBanner.classList.add('hidden');
+            localStorage.setItem('cookiesAccepted', 'true');
+        });
+    }
+
     /* 1. Mobile Menu Toggle */
     const nav = document.getElementById('nav');
     const navToggle = document.getElementById('nav-toggle');
